@@ -35,7 +35,7 @@ class WebServer(BaseHTTPRequestHandler):
             self.send_html("index.html")
         elif router == "#":
             self.send_html("index.html")
-        elif router == "/message":
+        elif router.startswith("/message"):
             self.send_html("message.html")
         else:
             file = BASE_DIR.joinpath(router[1:])
